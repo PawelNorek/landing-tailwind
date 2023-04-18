@@ -7,5 +7,48 @@
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <header class="text-zinc-200">
+        <nav
+          class="sticky top-0 flex bg-gradient-to-r from-slate-700 to-slate-300"
+        >
+          <div class="flex items-center gap-2 p-2">
+            <img src="./assets/images/logo-inverted.png" width="50" />
+            <div class="text-2xl font-bold">
+              tw:<span class="text-sky-300">mf</span>
+            </div>
+          </div>
+          <div class="flex flex-1 items-center justify-end">
+            <div class="menu-item">
+              <span> Home </span>
+            </div>
+            <div class="menu-item">
+              <span> Lineup </span>
+            </div>
+            <div class="menu-item group">
+              <span> Tickets </span>
+              <div
+                class="absolute right-0 top-full hidden whitespace-nowrap rounded-b-md bg-slate-300 text-right group-hover:block"
+              >
+                <div
+                  class="cursor-pointer p-4 font-bold text-zinc-400 transition-colors ease-in-out hover:bg-white/20 hover:text-zinc-300"
+                >
+                  <span> Single day ticket </span>
+                </div>
+                <div
+                  class="cursor-pointer p-4 font-bold text-zinc-400 transition-colors ease-in-out hover:bg-white/20 hover:text-zinc-300"
+                >
+                  <span> 7 day ticket </span>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <span> Support </span>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </main>
+  </body>
 </html>
