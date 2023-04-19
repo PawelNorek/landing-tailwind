@@ -6,6 +6,18 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById("mobile-menu-button");
+        mobileMenuIcon.addEventListener("click", () => {
+          if (mobileMenuIcon.classList.contains("open")) {
+            mobileMenuIcon.classList.remove("open");
+          } else {
+            mobileMenuIcon.classList.add("open");
+          }
+        });
+      };
+    </script>
   </head>
   <body>
     <main>
@@ -19,7 +31,20 @@
               tw:<span class="text-sky-300">mf</span>
             </div>
           </div>
-          <div class="flex flex-1 items-center justify-end">
+          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+            <div id="mobile-menu-button" class="group">
+              <div
+                class="relative top-0 h-1 w-8 rounded-full bg-zinc-800 transition-all group-open:top-2 group-open:rotate-45"
+              ></div>
+              <div
+                class="mt-1 h-1 w-8 rounded-full bg-zinc-800 opacity-100 group-open:opacity-0"
+              ></div>
+              <div
+                class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-800 transition-all group-open:-top-2 group-open:-rotate-45"
+              ></div>
+            </div>
+          </div>
+          <div class="hidden flex-1 items-center justify-end md:flex">
             <div class="menu-item">
               <span> Home </span>
             </div>
@@ -29,15 +54,15 @@
             <div class="menu-item group">
               <span> Tickets </span>
               <div
-                class="absolute right-0 top-full hidden whitespace-nowrap rounded-b-md bg-slate-300 text-right group-hover:block"
+                class="absolute right-0 top-full hidden whitespace-nowrap rounded-b-md bg-slate-800 text-right group-hover:block"
               >
                 <div
-                  class="cursor-pointer p-4 font-bold text-zinc-400 transition-colors ease-in-out hover:bg-white/20 hover:text-zinc-300"
+                  class="cursor-pointer p-4 font-bold text-zinc-500 transition-colors ease-in-out hover:bg-white/10 hover:text-zinc-400"
                 >
                   <span> Single day ticket </span>
                 </div>
                 <div
-                  class="cursor-pointer p-4 font-bold text-zinc-400 transition-colors ease-in-out hover:bg-white/20 hover:text-zinc-300"
+                  class="cursor-pointer p-4 font-bold text-zinc-500 transition-colors ease-in-out hover:bg-white/10 hover:text-zinc-400"
                 >
                   <span> 7 day ticket </span>
                 </div>
