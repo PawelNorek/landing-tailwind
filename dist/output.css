@@ -592,6 +592,24 @@ h6{
   }
 }
 
+.btn{
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  spacing: ${theme('spacing.2')} ${theme('spacing.4')};
+  border-radius: 0.5rem;
+}
+
+.btn-rose-500{
+  background-color: #f43f5e;
+  color: black;
+}
+
+.btn-\[\#000\]{
+  background-color: #000;
+  color: white;
+}
+
 .menu-item{
   position: relative;
   display: flex;
